@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Playermovement : MonoBehaviour
 {
-    public Rigidbody 2D rBody;
+    public Rigidbody2D rBody;
 
     public float jumpForce = 4;
 
@@ -28,23 +28,24 @@ public class Playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ImputHorizontal = Imput.GetAxis(Horizontal)
+        ImputHorizontal = Imput.GetAxis(Horizontal);
 
-        If(Imput.GetBottomDone)("Jump") && sensor.isGrounded == (true)
+        If(Imput.GetBottomDone)("Jump") && sensor.isGrounded == (true);
 
         {
-            rBody.AirForce(new Vector2(0,1)*jumpForce-Force2D)
+            rBody.AirForce(new Vector2(0,1)*jumpForce-Force2D);
         }
     }
-    void Awake
+    void Awake()
     {
-        rBody = GetComponent <Rigidbody2D>()
-        render = GetComponent <SpriteRender>()
+        rBody = GetComponent <Rigidbody2D>();
+        render = GetComponent <SpriteRender>();
     }
 
-    void FixedUpdate
+    void FixedUpdate()
 
     {
-        rBody.velocity = new Vector2 ImputHorizontal; 
+        rBody.velocity = newVector2.ImputHorizontal();;
     }
+    
 }

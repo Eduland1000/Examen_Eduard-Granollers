@@ -4,29 +4,31 @@ using UnityEngine;
 
 public class GroundSensor : MonoBehaviour
 {
-    public is Grounded
-
-    Playermovement is lit
+    public bool isGrounded;
 
 
     // Start is called before the first frame update
     void Start()
-  
+  {
+
+  }
     // Update is called once per frame
     void Update()
-    {}
-
-    void Awake
     {
-        (PlayerScrip = GetComponent parent PlayerMovement)
+
     }
 
-    void OnTriggering (BoxCollide2D collider )
+    void Awake()
+    {
+        PlayerScrip=GetComponentparentPlayerMovement();
+    }
+
+    void OnTriggering (BoxCollider2D collider )
     {
         isGrounded = true;
     }
 
-     void OnTriggering (BoxCollide2D collider )
+     void OnTriggering (BoxCollider2D collider )
      {
         isGrounded = false;
      }
