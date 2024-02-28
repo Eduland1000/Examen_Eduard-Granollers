@@ -11,22 +11,24 @@ public class GroundSensor : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        If (isGrounded )
-    }
-
+  
     // Update is called once per frame
     void Update()
-    {
-        
-    }
+    {}
 
-    void Awake 
+    void Awake
     {
-        PlayerScrip = GetComponent parent Playermovement
+        (PlayerScrip = GetComponent parent PlayerMovement)
     }
 
     void OnTriggering (BoxCollide2D collider )
+    {
+        isGrounded = true;
+    }
 
+     void OnTriggering (BoxCollide2D collider )
+     {
+        isGrounded = false;
+     }
 
 }
