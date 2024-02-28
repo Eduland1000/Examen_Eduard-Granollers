@@ -23,12 +23,12 @@ public class GroundSensor : MonoBehaviour
         PlayerScrip=GetComponentparentPlayerMovement();
     }
 
-    void OnTriggering (BoxCollider2D collider )
+    void OnTriggered (BoxCollider2D collider )
     {
         isGrounded = true;
     }
 
-     void OnTriggering (BoxCollider2D collider )
+     void OnTriggered (BoxCollider2D collider )
      {
         isGrounded = false;
      }
