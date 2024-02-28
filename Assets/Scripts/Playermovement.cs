@@ -45,6 +45,6 @@ public class Playermovement : MonoBehaviour
     void FixedUpdate
 
     {
-        
+        rBody.velocity = new Vector2 ImputHorizontal; 
     }
 }
