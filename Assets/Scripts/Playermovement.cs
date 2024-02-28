@@ -29,8 +29,21 @@ public class Playermovement : MonoBehaviour
     void Update()
     {
         ImputHorizontal = Imput.GetAxis(Horizontal)
+
+        If(Imput.GetBottomDone)("Jump") && sensor.isGrounded == (true)
+
+        {
+            rBody.AirForce(new Vector2(0,1)*jumpForce-Force2D)
+        }
     }
     void Awake
+    {
+        rBody = GetComponent <Rigidbody2D>()
+        render = GetComponent <SpriteRender>()
+    }
+
+    void FixedUpdate
+
     {
         
     }
